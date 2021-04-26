@@ -1,0 +1,123 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Cabin;
+  background-color: rgb(240, 240, 240);
+}
+
+.header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .title h1 {
+  font-family: Lobster; 
+  font-size: 4em;
+  font-weight: 300;
+}
+
+.header .title .underline {
+  height: 0;
+  width: 40%;
+  border: 2px solid rgb(211, 188, 59);
+}
+
+.header .buttons-div {
+  margin-top: 25px;
+}
+
+.header .buttons-div > button {
+  padding: 5px 15px;
+  color: rgb(211, 188, 59);
+  border: 1px solid rgb(211, 188, 59);
+  border-radius: 10px;
+  background-color: rgb(250, 250, 250);
+  /* box-shadow: 1px 1px 10px -10px rgb(0, 0, 0); */
+  box-shadow: 0 4px 6px -2px black;
+  font-family: Cabin;
+  font-size: 1.2rem;
+  margin: 0px 5px 5px 5px;
+  cursor: pointer;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 930px){
+  main {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.grid {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 930px){
+  .grid {
+    display: grid; 
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.option {
+  display: flex;
+  margin: 35px 0px 25px 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 162px;
+}
+
+.option .text {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 930px){
+  .option .text {
+    width: 100%;
+  }
+}
+
+.option .text .name-and-cost {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(180, 180, 180, 0.8);
+  padding-bottom: 5px;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.option .text .name-and-cost .cost {
+  color:rgb(211, 188, 59);
+}
+
+.option .text .info {
+  padding-top: 15px;
+}
+
+.option .text .info .bio {
+  font-size: 0.9rem;
+}
+
+img {
+  height: 162px;
+}
